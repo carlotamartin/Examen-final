@@ -10,5 +10,21 @@ def eurosToBitcoin (euros_amount, bitcoin_value_euros):
 
 def Bitcoin_debajo(euros_value):
     if euros_value < 30000:
-        return True
-    bitcoin_amount = float(input("Enter the amount of bitcoins: "))
+        return print('Bitcoin debajo de 30.000 euros')
+    else:
+        return print('Bitcoin encima de 30.000 euros')
+
+if __name__ == '__main__':
+    bitcoin_amount = int(input('Introduce la cantidad de bitcoins: '))
+    bitcoin_value_euros = int(input('Introduce el valor de los bitcoins en euros: '))
+    euros_amount = int(input('Introduce la cantidad de euros: '))
+    euros_value_euros = int(input('Introduce el valor de los euros en euros: '))
+    euros_value = bitcoinToEuros(bitcoin_amount, bitcoin_value_euros)
+    bitcoin_value = eurosToBitcoin(euros_amount, euros_value_euros)
+    Bitcoin_debajo(euros_value)
+    print('El valor de los bitcoins en euros es: ', bitcoin_value_euros)
+    print('El valor de los euros en euros es: ', euros_value_euros)
+    print('El valor de los bitcoins es: ', bitcoin_value)
+    print('El valor de los euros es: ', euros_value)
+
+
